@@ -3,15 +3,20 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 async function main() {
-  const post = await prisma.post.create({
+  const user = await prisma.user.create({
     data: {
-      title: "donghyo JJang JJang man~~~2",
-      author: {
-        connect: { id: 1 },
+      name: "user 1",
+      post: {
+        create: [{ title: "post 1" }, { title: "post 2" }],
       },
     },
   });
-  console.log(post);
+
+  await prisma.user.delete({
+    where: { id: user.id },
+  });
+
+  console.log(user);
 }
 
 main()
