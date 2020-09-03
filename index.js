@@ -3,9 +3,13 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 async function main() {
-  const post = await prisma.post.update({
-    where: { id: 1 },
-    data: { published: true },
+  const post = await prisma.post.create({
+    data: {
+      title: "donghyo JJang JJang man~~~2",
+      author: {
+        connect: { id: 1 },
+      },
+    },
   });
   console.log(post);
 }
