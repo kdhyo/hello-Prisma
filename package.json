@@ -2,5 +2,25 @@
   "name": "helloprisma",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^2.6.0"
+  },
+  "description": "\"# Hello-Prisma\"",
+  "devDependencies": {
+    "@prisma/cli": "^2.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdhyo/hello-Prisma.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/kdhyo/hello-Prisma/issues"
+  },
+  "homepage": "https://github.com/kdhyo/hello-Prisma#readme"
 }
